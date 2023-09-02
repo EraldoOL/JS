@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    
+    #area{
+      background: green;
+      color: white;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+    interaja
+    
+  </div>
+  
+  <script>
+  var a = window.document.getElementById('area')
+    function clicar() {
+      
+      a.innerText = 'clicou'
+      a.style.background = 'red'
+    }
+    function entrar() {
+      a.innerText = 'entrou'
+    }
+    function sair(){
+      a.innerText = 'saiu'
+      a.style.background = 'yellow'
+    }
+    
+  </script>
+  
+</body>
+</html>

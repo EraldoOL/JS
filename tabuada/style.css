@@ -8,7 +8,7 @@ body{
 header{
   color: white;
   text-align: center;
-  
+ 
 }
 
 section{
@@ -17,5 +17,5 @@ section{
   padding: 15px;
   width: 500px;
   margin: auto;
-  box-shadow: 5px 5px 10px black;
+  box-shadow: 5px 5px 10px black
 }

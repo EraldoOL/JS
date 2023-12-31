@@ -199,10 +199,10 @@ const funcao3 = () => {
 }
 const main = () => {
   try {
-      try{
-         try{
-            try{
-               try{
+     try{
+        try{
+           try{
+              try{
             throw new Error("deu erro 3")
           }catch (error){
             console.error(error)
@@ -217,11 +217,11 @@ const main = () => {
         throw error
       }
     }catch (error){
-    console.error(error)
-    throw error
-  }
-  }catch (error) {
-    console.error(error)
+      console.error(error)
+      throw error
+   }
+ }catch (error) {
+   console.error(error)
   }
   console.log("passou aki")
 }

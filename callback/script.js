@@ -226,3 +226,129 @@ const main = () => {
   console.log("passou aki")
 }
 main()
+
+
+
+
+
+//VOU PRECISAR
+
+
+
+
+
+const somaTresNumeros = (num1, num2, num3) => {
+  return num1 + num2 + num3
+}
+
+console.log(somaTresNumeros(1 , 2 , 3))
+
+
+function somaNumerosInfinitamentev1 () {
+  const args = Array.from(arguments)
+  let soma = 0;
+  
+  for(let i = 0; i < args.length; i++){
+    soma += args[i]
+  }
+  return soma;
+}
+console.log(somaNumerosInfinitamentev1(1,2,3,4,5))
+
+
+function somaNumerosInfinitamentev1 (...args) {
+  return args.reduce((acumulador, valorAtual) => acumulador += valorAtual
+  )
+}
+console.log(somaNumerosInfinitamentev1(1,2,3,4))
+
+const multiplicarPeloPrimeiro = (multipicador, ...args) => {
+  return args.map((num) =>  multipicador * num
+  )
+}
+console.log(multiplicarPeloPrimeiro(2,1,2,3,4))*/
+
+
+
+
+/*const somaTresNumeros = (num1, num2, num3) => {
+  return num1 + num2 + num3
+}
+
+console.log(somaTresNumeros(...listaNumeros))
+
+// CONCATENAR
+
+const listaNumeros1 = [1,2,3]
+const listaNumeros2 = [4,5,6]
+
+const listaNumerosTotal = [...listaNumeros1, listaNumeros2]
+console.log("esperar")
+
+// Object.assign(obj) cria objeto novo
+
+const obj = {a: 1, b: 1}
+const obj2 = {prop1: 1, prop2: 1}
+
+const objCopy = {...obj1, ...obj2}
+
+console.log('esperar')
+
+const obj = { a: "asdf", b: "ksksj"}
+
+
+
+
+// detructor 
+
+
+
+
+
+const foo =[ "um" , "dois", "tres"];
+
+const [um, dois , tres] = foo;
+
+console.log(um)
+console.log(dois)
+console.log(tres)
+
+let a, b
+
+[a,b] = [1,2]
+
+console.log(a)
+console.log(b)
+
+let a = 1
+let b = 3
+
+[a,b] = [b,a]
+
+console.log(a,b)
+
+const [a, ...b] = [1,2,3]
+
+console.log(a,b)
+
+const o = {p: 42,q: true}
+const {p,q} = o
+
+console.log(p,q)
+
+let a,b
+
+({a,b} = {a:1 ,b:2})
+
+console.log(a,b)
+
+const o = {p: 42,q: true}
+const {p: foo, q: bar} = o
+
+console.log(foo,bar)
+
+// destruturar de primeira
+
+const {a = 10, b = 5} = {a: 3}
+console.log(a,b)*
+

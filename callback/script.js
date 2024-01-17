@@ -266,7 +266,7 @@ const multiplicarPeloPrimeiro = (multipicador, ...args) => {
   return args.map((num) =>  multipicador * num
   )
 }
-console.log(multiplicarPeloPrimeiro(2,1,2,3,4))*/
+console.log(multiplicarPeloPrimeiro(2,1,2,3,4))
 
 
 
@@ -350,5 +350,114 @@ console.log(foo,bar)
 // destruturar de primeira
 
 const {a = 10, b = 5} = {a: 3}
-console.log(a,b)*
+console.log(a,b)
 
+let somar = (n1,n2,n3) => {
+  return n1 + n2 +n3
+}
+console.log(somar(1,2,3))
+
+
+function multiplicar(a = 1,b = 1) {
+  
+  return a*b
+}
+console.log(multiplicar(5))
+console.log(multiplicar())
+console.log(multiplicar(undefined,6))
+
+function test(num = 1) {
+  console.log(typeof num)
+}
+test()
+test(undefined)
+
+function concatenar(value, array =[]) {
+  array.push(value)
+  return array
+}
+concatenar(1)
+concatenar(2)
+console.log(concatenar(3))
+
+//toda função retorna alguma coisa
+// destruturar
+function somaArrays ([x,y] = [1,2], {z:z} = {z:3}) {
+  return x + y + z
+}
+console.log(somaArrays())
+console.log(somaArrays([3,4 , {z:1}]))
+
+function somaR(n) {
+  if (n === 1) {
+    return 1
+  }
+  return n + somaR(n - 1)
+}
+console.log(somaR(5))
+
+
+
+
+
+//Timeout das coisas BEM ÚTIL
+
+
+
+
+
+function time(num) {
+  return new Promise(resolve => setTimeout(() => resolve(num), 1000))
+}
+
+async function conta(num) {
+  if (num <= 0) {
+    return console.log('feliz ano novo')
+  }
+  
+  console.log(await time(num))
+  
+  return conta(num -1)
+}
+
+conta(10)
+
+function fatorial(n) {
+  if (n === 1) {
+    return 1
+  }
+  return n * fatorial(n - 1)
+}
+console.log(fatorial(5))
+
+
+
+
+
+// CARRYiNG
+
+
+let resultado
+
+function ehmaior(a,b) {
+  return a > b
+}
+
+resultado = ehmaior(2,5)
+
+console.log(resultado)
+
+let resultado
+
+function ehmaiorclosu(a) {
+  return function (b) {
+    return a > b
+  }
+}
+
+resultado = ehmaiorclosu(2)(5)
+
+console.log(resultado)
+
+//freese deixa o obj parado
+//seal adicionar valores (atribuir)
